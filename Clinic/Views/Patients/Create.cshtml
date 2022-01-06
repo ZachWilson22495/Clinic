@@ -1,0 +1,18 @@
+@model Clinic.Models.Patient
+
+<h4>Please fill in Patient Details below</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.PatientName)
+  @Html.TextBoxFor(model => model.PatientName)
+
+  @Html.LabelFor(model => model.Birthdate)
+  @Html.EditorFor(model => model.Birthdate)
+
+  @*@Html.Label("Select doctor")
+  @Html.DropDownList("DoctorId")*@
+
+  <input type="submit" value="Add new patient" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all patients", "Index")</p>

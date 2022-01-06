@@ -1,0 +1,17 @@
+@model Clinic.Models.Patient
+
+<h2>Add a doctor</h2>
+
+<h4>Add a doctor to this task: @Html.DisplayFor(model => model.PatientName)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.PatientId)
+
+    @Html.Label("Select doctor")
+    @Html.DropDownList("DoctorId")
+
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>

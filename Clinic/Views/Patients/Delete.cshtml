@@ -1,0 +1,10 @@
+@model Clinic.Models.Patient
+
+<h2>Are you sure you want to delete this?</h2>
+
+@Html.DisplayNameFor(model => model.PatientName): @Html.DisplayFor(model => model.PatientName)
+@using (Html.BeginForm())
+{
+  <input type ="submit" value="Delete" />
+}
+@Html.ActionLink("Back to List", "Index")
